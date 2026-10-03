@@ -3,7 +3,7 @@
 > **Asignatura:** Patrones de Diseño de Software  
 > **Institución:** Unidades Tecnológicas de Santander (UTS)  
 > **Docente:** Eliecer Montero Ojeda Ed.D  
-> **Estudiante / Autor:** Miguel Eduardo Ardila Cossio (meac@uts.edu.co)  
+> **Estudiante / Autor:** Miguel Eduardo Ardila Cossio (meduardoardila@uts.edu.co)  
 
 ---
 
