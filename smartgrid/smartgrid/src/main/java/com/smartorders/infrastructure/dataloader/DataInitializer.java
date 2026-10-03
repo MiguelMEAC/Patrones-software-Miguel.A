@@ -2,6 +2,8 @@ package com.smartorders.infrastructure.dataloader;
 
 import com.smartorders.domain.model.*;
 import com.smartorders.domain.ports.out.ClienteRepositoryPort;
+import com.smartorders.domain.ports.out.PedidoRepositoryPort;
+import com.smartorders.infrastructure.builder.PedidoBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -16,9 +18,11 @@ public class DataInitializer implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(DataInitializer.class);
     private final ClienteRepositoryPort clienteRepository;
+    private final PedidoRepositoryPort pedidoRepository;
 
-    public DataInitializer(ClienteRepositoryPort clienteRepository) {
+    public DataInitializer(ClienteRepositoryPort clienteRepository, PedidoRepositoryPort pedidoRepository) {
         this.clienteRepository = clienteRepository;
+        this.pedidoRepository = pedidoRepository;
     }
 
     @Override
@@ -98,5 +102,18 @@ public class DataInitializer implements CommandLineRunner {
         clienteRepository.guardar(clienteMoroso);
 
         log.info("[DATA_INITIALIZER] 6 Clientes de prueba inicializados exitosamente.");
+
+        // 7. Precarga del Pedido ORD-101 (Aprobado) para pruebas inmediatas de Facturacion (Factory Method)
+        Pedido pedido101 = new PedidoBuilder(clienteVip)
+                .conId("ORD-101")
+                .conCodigo("ORD-101")
+                .conObservaciones("Pedido precargado para pruebas de facturacion")
+                .agregarItem("PROD-01", "Portátil Dell XPS 15", 1, 2500000.0)
+                .agregarItem("PROD-02", "Mouse Inalámbrico", 1, 150000.0)
+                .conPorcentajeDescuento(0.15)
+                .build();
+        pedido101.aprobar();
+        pedidoRepository.guardar(pedido101);
+        log.info("[DATA_INITIALIZER] Pedido ORD-101 precargado exitosamente para pruebas de facturacion.");
     }
 }

@@ -27,8 +27,10 @@ import java.util.NoSuchElementException;
 /**
  * Patrón Estructural: Facade (GoF)
  * Fachada de Procesamiento Integral de Pedidos.
- * Proporciona una interfaz unificada y de alto nivel que oculta la complejidad del subsistema de crédito,
- * estrategias de descuento, construcción inmutable, observadores, persistencia y facturación.
+ * Proporciona una interfaz unificada y de alto nivel que oculta la complejidad
+ * del subsistema de crédito,
+ * estrategias de descuento, construcción inmutable, observadores, persistencia
+ * y facturación.
  */
 @Component
 public class PedidoProcesamientoFacade {
@@ -38,8 +40,8 @@ public class PedidoProcesamientoFacade {
     private final ClienteRepositoryPort clienteRepository;
     private final PedidoRepositoryPort pedidoRepository;
     private final TransaccionCredito transaccionCredito; // Decorator
-    private final DescuentoContext descuentoContext;     // Strategy
-    private final PedidoEventPublisher eventPublisher;   // Observer
+    private final DescuentoContext descuentoContext; // Strategy
+    private final PedidoEventPublisher eventPublisher; // Observer
     private final Map<String, FacturaFactory> fabricasFactura; // Factory Method
 
     public PedidoProcesamientoFacade(

@@ -20,9 +20,14 @@ public class FacturaController {
     @PostMapping("/generar")
     public ResponseEntity<FacturaResponseDTO> generarFactura(
             @RequestParam String pedidoId,
-            @RequestParam(defaultValue = "ESTANDAR") String tipo) {
+            @RequestParam(name = "tipo", required = false) String tipo,
+            @RequestParam(name = "tipoFactura", required = false) String tipoFactura) {
 
-        ResultadoFactura resultado = facturarPedidoUseCase.generarFactura(pedidoId, tipo);
+        String tipoFinal = (tipoFactura != null && !tipoFactura.isBlank()) 
+                ? tipoFactura 
+                : (tipo != null && !tipo.isBlank() ? tipo : "ESTANDAR");
+
+        ResultadoFactura resultado = facturarPedidoUseCase.generarFactura(pedidoId, tipoFinal);
 
         return ResponseEntity.ok(new FacturaResponseDTO(
                 resultado.tipo(),
