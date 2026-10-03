@@ -476,44 +476,44 @@ Si deseas ejecutar con PostgreSQL en lugar de H2 en memoria:
 
 ### 1. Consultar Estado Global del Sistema (GoF Singleton)
 ```bash
-curl -X GET http://localhost:8080/api/sistema/estado
+curl -s -X GET http://localhost:8080/api/sistema/estado | jq .
 ```
 
 ---
 
-### 2. Crear Pedido para Cliente VIP (Aplica 15% Descuento Automático)
+### 2. Crear Pedido para Cliente VIP (Aplica 15% Descuento Automático - GoF Builder & Strategy)
 ```bash
-curl -X POST http://localhost:8080/api/pedidos \
+curl -s -X POST http://localhost:8080/api/pedidos \
   -H "Content-Type: application/json" \
   -d '{
     "clienteId": "CLI-VIP",
     "observaciones": "Entrega express oficina",
     "items": [
-      { "productoId": "PROD-01", "descripcion": "Portátil Dell XPS", "cantidad": 1, "precioUnitario": 2500000.0 }
+      { "productoId": "PROD-01", "nombreProducto": "Portátil Dell XPS", "cantidad": 1, "precioUnitario": 2500000.0 }
     ]
-  }'
+  }' | jq .
 ```
 
 ---
 
-### 3. Crear Pedido para Cliente Moroso (Rechazo Inmediato por Crédito)
+### 3. Crear Pedido para Cliente Moroso (Rechazo Inmediato por Crédito - GoF Decorator & State)
 ```bash
-curl -X POST http://localhost:8080/api/pedidos \
+curl -s -X POST http://localhost:8080/api/pedidos \
   -H "Content-Type: application/json" \
   -d '{
     "clienteId": "CLI-MOROSO",
     "observaciones": "Intento de compra en mora",
     "items": [
-      { "productoId": "PROD-02", "descripcion": "Servidor Rack", "cantidad": 1, "precioUnitario": 1800000.0 }
+      { "productoId": "PROD-02", "nombreProducto": "Servidor Rack", "cantidad": 1, "precioUnitario": 1800000.0 }
     ]
-  }'
+  }' | jq .
 ```
 
 ---
 
 ### 4. Emitir Factura Electrónica Fiscal con CUFE (GoF Factory Method)
 ```bash
-curl -X POST "http://localhost:8080/api/facturas/generar?pedidoId=ORD-101&tipoFactura=ELECTRONICA_FISCAL"
+curl -s -X POST "http://localhost:8080/api/facturas/generar?pedidoId=ORD-101&tipoFactura=ELECTRONICA_FISCAL" | jq .
 ```
 
 ---
