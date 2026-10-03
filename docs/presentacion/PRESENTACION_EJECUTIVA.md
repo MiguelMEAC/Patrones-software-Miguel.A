@@ -8,7 +8,7 @@
 ## 🗂️ Diapositiva 1: Portada
 - **Título:** SmartOrders Enterprise
 - **Subtítulo:** Refactorización Arquitectónica Hexagonal y Aplicación de 9 Patrones GoF
-- **Integrantes:** Equipo de Ingeniería UTS
+- **Autor / Estudiante:** Miguel Eduardo Ardila Cossio (`meduardoardila@uts.edu.co`)
 - **Materia:** Patrones de Diseño de Software
 
 ---

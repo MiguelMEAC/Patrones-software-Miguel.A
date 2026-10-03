@@ -1,7 +1,7 @@
 # 👨‍💻 PORTFOLIO TÉCNICO INDIVIDUAL DE INGENIERÍA
 ## Asignatura: Patrones de Diseño de Software - Unidades Tecnológicas de Santander (UTS)
 ## Docente: Eliecer Montero Ojeda Ed.D
-## Autor: Miguel Eduardo Ardila Cossio (`meac@uts.edu.co`)
+## Autor: Miguel Eduardo Ardila Cossio (`meduardoardila@uts.edu.co`)
 ### Proyecto: SmartOrders Enterprise
 
 ---
