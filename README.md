@@ -543,7 +543,7 @@ Patrones-software-Miguel.A/
 ├── Semana4/                             <- Avance del Patrón Factory Method
 ├── Semana5_Builder/                     <- Avance del Patrón Builder
 ├── Semana6/                             <- Avance de Patrones Adapter & Decorator
-├── Semana7/                             <- Avance de Patrones Comportamiento & Hexagonal
+├── Semana7/                             <- Avance de Patrones Adapter & Bridge (03/10/2026)
 ├── assets/                              <- Diagramas UML e infografías arquitectónicas
 ├── pom.xml                              <- POM raíz del workspace
 └── smartgrid/smartgrid/                 <- APLICACIÓN SPRING BOOT (Java 21)

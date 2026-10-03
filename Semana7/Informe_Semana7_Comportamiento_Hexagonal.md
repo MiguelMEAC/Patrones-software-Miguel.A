@@ -1,6 +1,10 @@
 # 📑 INFORME TÉCNICO - SEMANA 7: PATRONES DE COMPORTAMIENTO & ARQUITECTURA HEXAGONAL
 ## Proyecto: SmartOrders Enterprise
 ### Patrones Implementados: Strategy, Observer, State, Facade + Integración Hexagonal
+* **Estudiante:** Miguel Eduardo Ardila Cossio (`meduardoardila@uts.edu.co`)
+* **Docente:** Eliecer Montero Ojeda Ed.D
+* **Institución:** Unidades Tecnológicas de Santander (UTS)
+* **Fecha de Entrega:** 03/10/2026
 
 ---
 
