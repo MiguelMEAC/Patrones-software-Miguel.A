@@ -410,8 +410,8 @@ El proyecto cuenta con una batería de **32 pruebas unitarias e integradas** con
 
 | Métrica | Cobertura Obtenida | Umbral Mínimo Rúbrica | Estado |
 | :--- | :---: | :---: | :---: |
-| **Líneas de Código (Line)** | **82.45%** (672 / 815) | 80.00% | ✅ APROBADO |
-| **Instrucciones Bytecode (Instruction)** | **82.28%** (2.889 / 3.511) | 80.00% | ✅ APROBADO |
+| **Líneas de Código (Line)** | **82.84%** (705 / 851) | 80.00% | ✅ APROBADO |
+| **Instrucciones Bytecode (Instruction)** | **82.10%** (2.926 / 3.564) | 80.00% | ✅ APROBADO |
 | **Clases Cubiertas (Class)** | **96.77%** (60 / 62) | N/A | ✅ APROBADO |
 
 > [!TIP]
