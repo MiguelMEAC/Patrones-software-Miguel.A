@@ -1,7 +1,7 @@
 -- =========================================================================
 -- SISTEMA DE GESTION INTELIGENTE DE PEDIDOS, CREDITO Y FACTURACION (SmartOrders)
 -- Base de Datos Relacional: PostgreSQL 16+
--- Autor: Equipo de Ingenieria UTS - Patrones de Software
+-- Autor: Miguel Eduardo Ardila Cossio (meduardoardila@uts.edu.co) - Patrones de Software UTS
 -- =========================================================================
 
 -- Limpieza preventiva
