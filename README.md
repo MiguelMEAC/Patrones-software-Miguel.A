@@ -546,6 +546,7 @@ Patrones-software-Miguel.A/
 ├── Semana7/                             <- Avance de Patrones Adapter & Bridge (03/10/2026)
 ├── Semana8/                             <- Patrones Estructurales Composite & Decorator (04/10/2026)
 ├── Semana9/                             <- Patrones Estructurales Decorator Profundizado & Facade (08/10/2026)
+├── Semana10/                            <- Patrones Estructurales Flyweight & Proxy - Cierre Estructural (15/10/2026)
 ├── assets/                              <- Diagramas UML e infografías arquitectónicas
 ├── pom.xml                              <- POM raíz del workspace
 └── smartgrid/smartgrid/                 <- APLICACIÓN SPRING BOOT (Java 21)
